@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezproblémová migrace z VMware na Proxmox VE - Cloudpeakify</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../index.html">Cloudpeakify s.r.o.</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Domů</a></li>
+                    <li><a href="../about.html">O nás</a></li>
+                    <li><a href="../services.html">Služby</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                    <li><a href="../contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container post-container">
+                <h1 class="section-title">Jak na bezproblémovou migraci z VMware na Proxmox VE?</h1>
+                <p class="post-meta">Publikováno 18. května 2024</p>
+                
+                <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2070&auto=format&fit=crop" alt="Migrace VMware na Proxmox" class="post-hero-image">
+
+                <div class="post-content">
+                    <p>V reakci na nedávné změny v licenční politice VMware po akvizici společností Broadcom hledá stále více firem efektivní a cenově dostupné alternativy. Proxmox VE (Virtual Environment) se rychle stává preferovanou volbou díky své open-source filozofii, výkonu a bohaté sadě funkcí. Pojďme se podívat, jak úspěšně a hladce migrovat vaše virtuální stroje z VMware na Proxmox VE.</p>
+
+                    <h2>Proč je Proxmox VE skvělou alternativou?</h2>
+                    <div class="service-category no-border">
+                        <div class="service-item-detailed">
+                            <div class="service-item-content">
+                                <h3>Výrazné snížení nákladů</h3>
+                                <p>Proxmox VE je zdarma. Zapomeňte na vysoké licenční poplatky. Platíte pouze za volitelnou prémiovou podporu, což vede k okamžitým a výrazným úsporám.</p>
+                            </div>
+                        </div>
+                        <div class="service-item-detailed">
+                            <div class="service-item-content">
+                                <h3>Maximální flexibilita</h3>
+                                <p>Proxmox nativně podporuje KVM pro plnou virtualizaci a LXC kontejnery. To vám dává svobodu volby a efektivitu při nasazování a správě vašich aplikací.</p>
+                            </div>
+                        </div>
+                         <div class="service-item-detailed">
+                            <div class="service-item-content">
+                                <h3>Nezávislost a silná komunita</h3>
+                                <p>Jako open-source platforma vás Proxmox zbavuje závislosti na jediném dodavateli (vendor lock-in). Můžete se spolehnout na silnou a aktivní komunitu a transparentní vývoj.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Klíčové kroky úspěšné migrace</h2>
+                    <p>Migrace z VMware na Proxmox vyžaduje pečlivé plánování. Zde je osvědčený postup, který minimalizuje rizika a downtime:</p>
+                    <ol>
+                        <li><strong>Důkladná analýza a příprava:</strong> Zmapujte své stávající VMware prostředí. Identifikujte virtuální stroje k migraci a detailně zaznamenejte jejich konfiguraci (CPU, RAM, disky, sítě). Vyčistěte nepotřebná data.</li>
+                        <li><strong>Instalace a konfigurace Proxmox VE:</strong> Nainstalujte Proxmox na nový hardware. Důkladně nastavte síťové prvky (bridge, bonding) a úložiště (storage).</li>
+                        <li><strong>Konverze virtuálních disků:</strong> Převeďte disky z formátu VMDK na formát, který Proxmox preferuje (QCOW2, ZVOL, nebo RAW). Pro tento účel skvěle poslouží nástroj <code>qemu-img</code>. Příklad příkazu:
+                        <br><code>qemu-img convert -f vmdk -O qcow2 vas_disk.vmdk novy_disk.qcow2</code></li>
+                        <li><strong>Vytvoření a konfigurace VM v Proxmoxu:</strong> Vytvořte nové VM v Proxmoxu s odpovídající konfigurací. Zatím je nespouštějte.</li>
+                        <li><strong>Import disků a finální nastavení:</strong> Nahrajte zkonvertované disky do úložiště Proxmoxu a připojte je k nově vytvořeným VM. Zkontrolujte pořadí bootování.</li>
+                        <li><strong>Pečlivé testování:</strong> Spusťte migrované VM a důkladně otestujte jejich funkčnost, síťová připojení, a klíčové aplikace.</li>
+                    </ol>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Testování migrace" class="post-inline-image">
+
+                    <h2>Na co si dát pozor (Best Practices)</h2>
+                    <ul>
+                        <li><strong>Minimalizujte Downtime:</strong> Plánujte migraci na období s nízkou zátěží. U kritických systémů zvažte replikaci a testování přechodu nanečisto.</li>
+                        <li><strong>Ovladače VirtIO:</strong> Pro maximální výkon a stabilitu nainstalujte do virtuálních strojů (ideálně ještě před migrací) ovladače VirtIO pro síť a disky.</li>
+                        <li><strong>Zálohování je základ:</strong> Před jakýmkoliv krokem migrace proveďte kompletní a ověřenou zálohu vašich virtuálních strojů a dat.</li>
+                    </ul>
+
+                    <h2>Jsme tu pro vás</h2>
+                    <p>Migrace na novou platformu se může zdát jako velká výzva, ale se správným partnerem je to příležitost k modernizaci a optimalizaci. V Cloudpeakify máme s migracemi na Proxmox bohaté zkušenosti a rádi vás celým procesem provedeme. Zajistíme, aby byl váš přechod hladký, bezpečný a efektivní. <a href="../contact.html" class="btn">Kontaktujte nás</a> a objevte výhody Proxmox VE.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+</body>
+</html>

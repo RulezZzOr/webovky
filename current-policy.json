@@ -1,0 +1,4 @@
+{
+  "constraint": "constraints/gcp.restrictNonCmekServices",
+  "etag": "BwVUSr8Q7Ng="
+}

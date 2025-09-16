@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrace Blogu - Cloudpeakify</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="/index.html">Cloudpeakify</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/index.html">Domů</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/admin/" class="active">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Administrace Blogu</h1>
+                
+                <div id="auth-container">
+                    <p>Pro přístup do administrace se prosím přihlaste.</p>
+                    <form id="login-form" class="admin-login-form">
+                        <div class="form-group">
+                            <label for="login-email">E-mail</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Heslo</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Přihlásit</button>
+                        </div>
+                        <p id="login-message" class="form-message"></p>
+                    </form>
+                </div>
+
+                <div id="admin-content" class="hidden">
+                    <p>Jste přihlášeni jako <span id="user-email"></span>. <button id="logout-btn" class="btn btn-secondary" type="button">Odhlásit</button></p>
+                    
+                    <hr>
+
+                    <div class="admin-form-container">
+                        <h2 id="form-title">Nový příspěvek</h2>
+                        <form id="post-form">
+                            <input type="hidden" id="post-id">
+                            
+                            <div class="form-group">
+                                <label for="post-published">
+                                    <input type="checkbox" id="post-published">
+                                    Publikováno
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="post-image-url">URL obrázku</label>
+                                <input type="text" id="post-image-url" placeholder="https://example.com/image.jpg">
+                            </div>
+                            
+                            <div class="tabs">
+                                <button type="button" class="tab-link active" data-tab="cs">Česky</button>
+                                <button type="button" class="tab-link" data-tab="en">Anglicky</button>
+                            </div>
+
+                            <div id="tab-cs" class="tab-content active">
+                                <div class="form-group">
+                                    <label for="post-title_cs">Titulek (CS)</label>
+                                    <input type="text" id="post-title_cs" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-summary_cs">Shrnutí (CS)</label>
+                                    <textarea id="post-summary_cs" rows="3" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-content_cs">Obsah (CS)</label>
+                                    <textarea id="post-content_cs" rows="10" required></textarea>
+                                </div>
+                            </div>
+
+                            <div id="tab-en" class="tab-content">
+                                <div class="form-group">
+                                    <label for="post-title_en">Titulek (EN)</label>
+                                    <input type="text" id="post-title_en">
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-summary_en">Shrnutí (EN)</label>
+                                    <textarea id="post-summary_en" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-content_en">Obsah (EN)</label>
+                                    <textarea id="post-content_en" rows="10"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Uložit</button>
+                                <button type="button" id="cancel-edit" class="btn" style="display: none;">Zrušit úpravu</button>
+                            </div>
+                            <p id="post-form-message" class="form-message"></p>
+                        </form>
+                    </div>
+
+                    <hr>
+
+                    <h2>Seznam příspěvků</h2>
+                    <div class="table-wrapper">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Titulek</th>
+                                    <th>Stav</th>
+                                    <th>Akce</th>
+                                </tr>
+                            </thead>
+                            <tbody id="posts-list"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/i18n.js"></script>
+    <script type="module" src="../assets/js/app-admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.tab;
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    document.getElementById(`tab-${target}`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

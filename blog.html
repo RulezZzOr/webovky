@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Cloudpeakify s.r.o.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">Cloudpeakify s.r.o.</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="about.html">O nás</a></li>
+                    <li><a href="services.html">Služby</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop');">
+            <div class="container">
+                <h1>Náš Blog</h1>
+                <p>Novinky, tipy a postřehy ze světa cloudu.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div id="blog-posts" class="blog-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/app-blog.js"></script>
+</body>
+</html>

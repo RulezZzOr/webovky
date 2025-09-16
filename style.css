@@ -1,0 +1,354 @@
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #f0f4f8;
+    --accent-color: #007bff;
+    --text-color: #333;
+    --heading-font: 'Roboto', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-highlight {
+    background-color: var(--accent-color);
+}
+
+.btn-highlight:hover {
+    background-color: #0056b3;
+}
+
+/* Section */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-color);
+}
+
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.column-text {
+    text-align: left;
+}
+
+.column-image {
+    text-align: center;
+}
+
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Service Item Detailed */
+
+.service-category {
+    margin-bottom: 60px;
+}
+
+.service-category-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.service-item-detailed {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.service-item-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-item-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.service-item-content h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.service-item-content .btn {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.blog-post {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.blog-post-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 25px;
+}
+
+.blog-post-content h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.blog-post-content h3 a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.blog-post-content h3 a:hover {
+    color: var(--accent-color);
+}
+
+.blog-post-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* Post Content */
+#post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-message {
+    margin-top: 10px;
+    color: #2f855a;
+    font-size: 0.95rem;
+}
+
+.form-message.error {
+    color: #c53030;
+}
+
+.admin-login-form {
+    max-width: 420px;
+    margin: 0;
+}
+
+/* Contact Details */
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 20px;
+}
+
+.contact-item {
+    max-width: 300px;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 60px;
+}
