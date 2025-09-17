@@ -1,22 +1,49 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const contactForm = document.getElementById('contact-form');
-  const formStatus = document.getElementById('form-status');
+document.addEventListener('DOMContentLoaded', () => {
+  const forms = [
+    {
+      form: document.getElementById('contact-form'),
+      status: document.getElementById('form-status'),
+      messages: {
+        success: 'Děkujeme za zprávu! Ozveme se vám co nejdříve.',
+        error: 'Vyplňte prosím všechna povinná pole.',
+      },
+    },
+    {
+      form: document.getElementById('contact-form-en'),
+      status: document.getElementById('form-status-en'),
+      messages: {
+        success: 'Thank you for your message! We will be in touch shortly.',
+        error: 'Please fill in all required fields.',
+      },
+    },
+  ];
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
+  forms.forEach(({ form, status, messages }) => {
+    if (!form) return;
 
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const nameField = form.querySelector('input[name="name"], #name, #name-en');
+      const emailField = form.querySelector('input[name="email"], #email, #email-en');
+      const messageField = form.querySelector('textarea[name="message"], #message, #message-en');
+
+      const name = nameField ? nameField.value.trim() : '';
+      const email = emailField ? emailField.value.trim() : '';
+      const message = messageField ? messageField.value.trim() : '';
 
       if (name && email && message) {
-        formStatus.innerHTML = '<p class="text-green-600">Thank you for your message! We will get back to you soon.</p>';
-        contactForm.reset();
+        if (status) {
+          status.textContent = messages.success;
+          status.classList.remove('error');
+        }
+        form.reset();
       } else {
-        formStatus.innerHTML = '<p class="text-red-600">Please fill out all required fields.</p>';
+        if (status) {
+          status.textContent = messages.error;
+          status.classList.add('error');
+        }
       }
     });
-  }
+  });
 });

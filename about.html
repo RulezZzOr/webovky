@@ -1,27 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nás - Cloudpeakify s.r.o.</title>
+    <title>O nás – Cloudpeakify s.r.o.</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .skill-item {
-            text-align: center;
-        }
-        .skill-item img {
-            max-width: 100px;
-            margin-bottom: 1rem;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -42,42 +26,114 @@
     </header>
 
     <main>
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop');">
+        <section class="hero" style="padding: 120px 0 90px;">
             <div class="container">
-                <h1>Tým Cloud & AI Inovátorů</h1>
-                <p>Naše mise je pomáhat firmám odhalit skutečný potenciál cloudu a umělé inteligence.</p>
+                <div class="hero-headline" style="gap: 20px;">
+                    <span class="hero-badge">Cloudpeakify story</span>
+                    <h1>Jsme inženýrský tým, který propojuje cloud, data a AI do funkčních řešení.</h1>
+                    <p>Cloudpeakify založil Richard Skácel, aby firmám přinesl partnera s hlubokou technickou expertízou a jasnou orientací na výsledky. Od prvního workshopu až po provoz stojíme po vašem boku.</p>
+                </div>
+                <div class="hero-card">
+                    <div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.35rem;">Naše DNA</h3>
+                        <p style="color: var(--text-muted);">Spojujeme enterprise zkušenost s rychlostí startupů. Doručujeme projekty v iteracích, přinášíme best practices z Google Cloud ekosystému a trvale sledujeme business dopad.</p>
+                    </div>
+                    <div class="metric-grid">
+                        <div class="metric">
+                            <strong>50+</strong>
+                            <span>dodaných projektů</span>
+                        </div>
+                        <div class="metric">
+                            <strong>5/5</strong>
+                            <span>hodnocení klientů</span>
+                        </div>
+                        <div class="metric">
+                            <strong>EMEA</strong>
+                            <span>projekty napříč regionem</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <div class="container" style="max-width: 900px; text-align: left;">
-                <h2 class="section-title" style="text-align: center;">Náš příběh</h2>
-                <p style="font-size: 1.1rem;">Cloudpeakify s.r.o. je vize jednoho muže, Richarda Skácela. S více než 15 lety zkušeností v IT, od správy serverů až po komplexní cloudové architektury, se Richard rozhodl přetavit své znalosti a vášeň pro technologie v něco víc – v partnerství pro firmy, které chtějí růst a inovovat.</p>
-                <p style="font-size: 1.1rem;">Richard je certifikovaný <strong>Google Cloud (PCA), Azure a VMware specialista</strong>, s hlubokými znalostmi v oblasti umělé inteligence. Jeho vize je jednoduchá: poskytovat nejen špičkové technické znalosti, ale také strategické poradenství, které firmám pomůže najít správnou cestu v digitálním světě. Cloudpeakify s.r.o. není jen další IT firma. Je to závazek k vašemu úspěchu.</p>
-                
-                <h2 class="section-title" style="text-align: center; margin-top: 4rem;">Klíčové dovednosti a certifikace</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-cloud-platform-logo.svg" alt="Google Cloud Logo">
-                        <p>Google Cloud Platform</p>
+            <div class="container split-layout">
+                <div>
+                    <div class="section-header" style="margin-bottom: 30px;">
+                        <h2>Příběh zakladatele</h2>
+                        <p>Richard Skácel působí v IT přes 15 let. Začínal jako správce infrastruktury, postupně vedl cloudové transformace v bankovnictví, retailu i průmyslu. Díky certifikacím Google Cloud Professional Cloud Architect, Azure Architect a VMware expertíze rozumí heterogenním prostředím v detailu.</p>
                     </div>
-                    <div class="skill-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Microsoft Azure Logo">
-                        <p>Microsoft Azure</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Vmware_logo.svg/2560px-Vmware_logo.svg.png" alt="VMware Logo">
-                        <p>VMware</p>
+                    <div class="card" style="background: rgba(17,24,48,0.78);">
+                        <p style="color: var(--text-muted);">„Cloud pro nás není jen technologie. Je to způsob, jak zrychlit inovace, otevřít data lidem, kteří je potřebují, a přinést firmám konkurenční výhodu. Každý projekt v Cloudpeakify navrhujeme tak, aby obstál i za několik let.“</p>
+                        <p style="font-weight: 600;">Richard Skácel · Founder & Principal Architect</p>
                     </div>
                 </div>
+                <div class="highlight-panel">
+                    <span class="pill">Co zaručujeme</span>
+                    <ul class="check-list">
+                        <li>Hands-on experty s Google Cloud, Azure i VMware zkušenostmi</li>
+                        <li>Transparentní delivery model a jasné KPI</li>
+                        <li>Partnerství – jsme součástí vašeho týmu, ne externí vendor</li>
+                        <li>Knowledge transfer a mentoring interních týmů</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-                <h3 class="section-title" style="text-align: center; margin-top: 3rem;">Firemní údaje</h3>
-                <div style="text-align: center;">
-                    <p><strong>Cloudpeakify s.r.o.</strong></p>
-                    <p>IČO: 21041342</p>
-                    <p>DIČ: CZ21041342</p>
-                    <p>Jsme plátci DPH.</p>
-                    <p>Podnikatel je zapsán v obchodním rejstříku.</p>
+        <section class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2>Naše hodnoty</h2>
+                    <p>Každý projekt stavíme na čtyřech pilířích, které definují, jak spolupracujeme a jaká řešení dodáváme.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Impact first</h3>
+                        <p>Řídíme se byznysovým přínosem. Každé rozhodnutí hodnotíme optikou dopadu na vaše cíle.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Engineering excellence</h3>
+                        <p>Dodáváme produkční řešení. S důrazem na bezpečnost, škálování, observabilitu i provoz.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Transparentní spolupráce</h3>
+                        <p>Pracujeme v iteracích, sdílíme plány i výsledky a stojíme si za slovem.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Učení a inovace</h3>
+                        <p>Investujeme do vlastního výzkumu, PoC a sdílení know-how. Technologie se mění – my také.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container split-layout">
+                <div>
+                    <div class="section-header" style="margin-bottom: 20px;">
+                        <h2>Certifikace & partnerství</h2>
+                        <p>Naše dovednosti potvrzují mezinárodní certifikace a dlouhodobá partnerství.</p>
+                    </div>
+                    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+                        <div class="card" style="align-items: center; text-align: center;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Google-cloud-platform-logo.svg" alt="Google Cloud" style="width: 80px;">
+                            <p>Google Cloud Professional Cloud Architect</p>
+                        </div>
+                        <div class="card" style="align-items: center; text-align: center;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg" alt="Azure" style="width: 90px;">
+                            <p>Microsoft Azure Architect Expert</p>
+                        </div>
+                        <div class="card" style="align-items: center; text-align: center;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Vmware_logo.svg/2560px-Vmware_logo.svg.png" alt="VMware" style="width: 120px;">
+                            <p>VMware Specialist & HCX expert</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight-panel">
+                    <span class="pill">Firemní údaje</span>
+                    <p><strong>Cloudpeakify s.r.o.</strong><br>IČO: 21041342 · DIČ: CZ21041342<br>Jsme plátci DPH. Zapsáni v obchodním rejstříku.</p>
+                    <p style="color: var(--text-muted);">Sídlo: Jičínská 226/16, 130 00 Praha 3, Žižkov</p>
+                    <a href="contact.html" class="btn btn-secondary" style="width: fit-content;">Kontaktovat tým</a>
                 </div>
             </div>
         </section>
@@ -85,7 +141,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+            <p>&copy; 2024 Cloudpeakify s.r.o. · Google Cloud & AI Delivery Partner</p>
         </div>
     </footer>
 </body>

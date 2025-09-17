@@ -3,90 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bezproblémová migrace z VMware na Proxmox VE - Cloudpeakify</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Migrace z VMware / Proxmox do Google Cloud · Cloudpeakify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="../index.html">Cloudpeakify s.r.o.</a>
+                    <a href="index.html">Cloudpeakify s.r.o.</a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="../index.html">Domů</a></li>
-                    <li><a href="../about.html">O nás</a></li>
-                    <li><a href="../services.html">Služby</a></li>
-                    <li><a href="../blog.html" class="active">Blog</a></li>
-                    <li><a href="../contact.html">Kontakt</a></li>
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="about.html">O nás</a></li>
+                    <li><a href="services.html">Služby</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section">
-            <div class="container post-container">
-                <h1 class="section-title">Jak na bezproblémovou migraci z VMware na Proxmox VE?</h1>
-                <p class="post-meta">Publikováno 18. května 2024</p>
-                
-                <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2070&auto=format&fit=crop" alt="Migrace VMware na Proxmox" class="post-hero-image">
-
-                <div class="post-content">
-                    <p>V reakci na nedávné změny v licenční politice VMware po akvizici společností Broadcom hledá stále více firem efektivní a cenově dostupné alternativy. Proxmox VE (Virtual Environment) se rychle stává preferovanou volbou díky své open-source filozofii, výkonu a bohaté sadě funkcí. Pojďme se podívat, jak úspěšně a hladce migrovat vaše virtuální stroje z VMware na Proxmox VE.</p>
-
-                    <h2>Proč je Proxmox VE skvělou alternativou?</h2>
-                    <div class="service-category no-border">
-                        <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>Výrazné snížení nákladů</h3>
-                                <p>Proxmox VE je zdarma. Zapomeňte na vysoké licenční poplatky. Platíte pouze za volitelnou prémiovou podporu, což vede k okamžitým a výrazným úsporám.</p>
-                            </div>
-                        </div>
-                        <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>Maximální flexibilita</h3>
-                                <p>Proxmox nativně podporuje KVM pro plnou virtualizaci a LXC kontejnery. To vám dává svobodu volby a efektivitu při nasazování a správě vašich aplikací.</p>
-                            </div>
-                        </div>
-                         <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>Nezávislost a silná komunita</h3>
-                                <p>Jako open-source platforma vás Proxmox zbavuje závislosti na jediném dodavateli (vendor lock-in). Můžete se spolehnout na silnou a aktivní komunitu a transparentní vývoj.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2>Klíčové kroky úspěšné migrace</h2>
-                    <p>Migrace z VMware na Proxmox vyžaduje pečlivé plánování. Zde je osvědčený postup, který minimalizuje rizika a downtime:</p>
-                    <ol>
-                        <li><strong>Důkladná analýza a příprava:</strong> Zmapujte své stávající VMware prostředí. Identifikujte virtuální stroje k migraci a detailně zaznamenejte jejich konfiguraci (CPU, RAM, disky, sítě). Vyčistěte nepotřebná data.</li>
-                        <li><strong>Instalace a konfigurace Proxmox VE:</strong> Nainstalujte Proxmox na nový hardware. Důkladně nastavte síťové prvky (bridge, bonding) a úložiště (storage).</li>
-                        <li><strong>Konverze virtuálních disků:</strong> Převeďte disky z formátu VMDK na formát, který Proxmox preferuje (QCOW2, ZVOL, nebo RAW). Pro tento účel skvěle poslouží nástroj <code>qemu-img</code>. Příklad příkazu:
-                        <br><code>qemu-img convert -f vmdk -O qcow2 vas_disk.vmdk novy_disk.qcow2</code></li>
-                        <li><strong>Vytvoření a konfigurace VM v Proxmoxu:</strong> Vytvořte nové VM v Proxmoxu s odpovídající konfigurací. Zatím je nespouštějte.</li>
-                        <li><strong>Import disků a finální nastavení:</strong> Nahrajte zkonvertované disky do úložiště Proxmoxu a připojte je k nově vytvořeným VM. Zkontrolujte pořadí bootování.</li>
-                        <li><strong>Pečlivé testování:</strong> Spusťte migrované VM a důkladně otestujte jejich funkčnost, síťová připojení, a klíčové aplikace.</li>
-                    </ol>
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop" alt="Testování migrace" class="post-inline-image">
-
-                    <h2>Na co si dát pozor (Best Practices)</h2>
-                    <ul>
-                        <li><strong>Minimalizujte Downtime:</strong> Plánujte migraci na období s nízkou zátěží. U kritických systémů zvažte replikaci a testování přechodu nanečisto.</li>
-                        <li><strong>Ovladače VirtIO:</strong> Pro maximální výkon a stabilitu nainstalujte do virtuálních strojů (ideálně ještě před migrací) ovladače VirtIO pro síť a disky.</li>
-                        <li><strong>Zálohování je základ:</strong> Před jakýmkoliv krokem migrace proveďte kompletní a ověřenou zálohu vašich virtuálních strojů a dat.</li>
-                    </ul>
-
-                    <h2>Jsme tu pro vás</h2>
-                    <p>Migrace na novou platformu se může zdát jako velká výzva, ale se správným partnerem je to příležitost k modernizaci a optimalizaci. V Cloudpeakify máme s migracemi na Proxmox bohaté zkušenosti a rádi vás celým procesem provedeme. Zajistíme, aby byl váš přechod hladký, bezpečný a efektivní. <a href="../contact.html" class="btn">Kontaktujte nás</a> a objevte výhody Proxmox VE.</p>
+        <section class="hero" style="padding: 120px 0 70px;">
+            <div class="container">
+                <div class="hero-headline" style="gap: 18px;">
+                    <span class="hero-badge">Cloud Engineering</span>
+                    <h1>Migrace z VMware / Proxmox do Google Cloud: Jak na to bez výpadků</h1>
+                    <p>Co obnáší přechod z on-prem virtualizačních platforem do GCP a jak minimalizovat rizika během cutoveru.</p>
+                    <span class="post-meta">Publikováno 20. dubna 2024</span>
                 </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 40px;">
+            <div class="container">
+                <article class="blog-post-full">
+                    <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2070&auto=format&fit=crop" alt="Migrace do GCP" class="post-image">
+                    <div class="post-body">
+                        <p>Mnoho organizací stojí před rozhodnutím, jak posunout své VMware nebo Proxmox prostředí do veřejného cloudu. Google Cloud Platform nabízí několik cest, jak zvládnout migraci rychle a bezpečně – od lift-and-shift až po modernizaci do kontejnerů.</p>
+
+                        <h2>Klíčové výzvy migrace</h2>
+                        <ul>
+                            <li><strong>Kompatibilita aplikací:</strong> některé legacy systémy vyžadují specifické konfigurace. Potřebujete plán pro refaktoring či replatforming.</li>
+                            <li><strong>Závislosti a integrace:</strong> mapujte napojení na databáze, identity a externí systémy.</li>
+                            <li><strong>Bezpečnost a compliance:</strong> zajistěte správné nastavení IAM, segmentaci sítí, šifrování a auditní logy.</li>
+                            <li><strong>Downtime:</strong> plánujte cutover do GCP s ohledem na minimální dopad na uživatele.</li>
+                        </ul>
+
+                        <h2>Doporučený postup</h2>
+                        <h3>1. Discovery & hodnocení</h3>
+                        <p>Proveďte inventuru workloadů, zmapujte závislosti a rozhodněte, které aplikace půjdou cestou lift-and-shift a které modernizujete (např. do GKE).</p>
+
+                        <h3>2. Připravte landing zone</h3>
+                        <p>Navrhněte GCP landing zone s terraformem, nastavte sítě, bezpečnostní politiky a monitoring. Bez stabilního základu se migrace nevyplatí.</p>
+
+                        <h3>3. Zvolte migrační nástroje</h3>
+                        <p>Pro VMware doporučujeme <strong>Google Migrate for Compute Engine</strong> (bývalý Velostrata) nebo HCX. Z Proxmoxu lze využít <strong>OVA export</strong>, případně nástroje jako <strong>CloudEndure</strong>.</p>
+
+                        <h3>4. Otestujte a optimalizujte</h3>
+                        <p>Po migraci proveďte výkonnostní testy, nastavte automatické škálování a FinOps reporting. Bezpečnostní tým by měl auditovat IAM a logování.</p>
+
+                        <h2>Proč Google Cloud?</h2>
+                        <p>GCP nabízí silnou síťovou infrastrukturu, bezpečnostní funkce založené na zero-trust, transparentní ceny a hlubokou integraci s Kubernetes. To z něj dělá vhodnou destinaci pro modernizaci i provoz kritických systémů.</p>
+
+                        <h2>Cloudpeakify jako váš partner</h2>
+                        <p>Máme za sebou několik velkých migrací z VMware a Proxmox do Google Cloud. Připravíme detailní plán, zajistíme bezpečný cutover a nastavíme provozní model s FinOps. Ozvěte se nám, pokud plánujete vlastní migraci – rádi pomůžeme.</p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+            <p>&copy; 2024 Cloudpeakify s.r.o. · Google Cloud & AI Delivery Partner</p>
         </div>
     </footer>
 </body>

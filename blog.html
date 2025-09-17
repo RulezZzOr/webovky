@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Cloudpeakify s.r.o.</title>
+    <title>Blog – Cloudpeakify s.r.o.</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -26,15 +26,22 @@
     </header>
 
     <main>
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop');">
+        <section class="hero" style="padding: 120px 0 80px;">
             <div class="container">
-                <h1>Náš Blog</h1>
-                <p>Novinky, tipy a postřehy ze světa cloudu.</p>
+                <div class="hero-headline" style="gap: 18px;">
+                    <span class="hero-badge">Insights & best practices</span>
+                    <h1>Náš blog o Google Cloudu, FinOps a datových platformách</h1>
+                    <p>Pravidelně sdílíme zkušenosti z implementací, architektonické tipy i návody, které můžete rovnou využít ve vlastních projektech.</p>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
+                <div class="section-header">
+                    <h2>Nejnovější články</h2>
+                    <p>Vybrali jsme témata, která teď nejvíce rezonují u našich klientů – od migrace workloadů po nastavení FinOps governance.</p>
+                </div>
                 <div id="blog-posts" class="blog-grid"></div>
             </div>
         </section>
@@ -42,7 +49,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+            <p>&copy; 2024 Cloudpeakify s.r.o. · Google Cloud & AI Delivery Partner</p>
         </div>
     </footer>
 

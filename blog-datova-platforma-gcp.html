@@ -3,88 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budujeme škálovatelnou datovou platformu na GCP - Cloudpeakify</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>Budujeme škálovatelnou datovou platformu na GCP · Cloudpeakify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="../index.html">Cloudpeakify s.r.o.</a>
+                    <a href="index.html">Cloudpeakify s.r.o.</a>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="../index.html">Domů</a></li>
-                    <li><a href="../about.html">O nás</a></li>
-                    <li><a href="../services.html">Služby</a></li>
-                    <li><a href="../blog.html" class="active">Blog</a></li>
-                    <li><a href="../contact.html">Kontakt</a></li>
+                    <li><a href="index.html">Domů</a></li>
+                    <li><a href="about.html">O nás</a></li>
+                    <li><a href="services.html">Služby</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section">
-            <div class="container post-container">
-                <h1 class="section-title">Průvodce stavbou moderní datové platformy na GCP</h1>
-                <p class="post-meta">Publikováno 12. května 2024</p>
-
-                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop" alt="Datová platforma GCP" class="post-hero-image">
-
-                <div class="post-content">
-                    <p>V digitální éře představují data klíčový strategický majetek. Firmy, které dokáží svá data efektivně sbírat, zpracovávat a analyzovat, získávají rozhodující konkurenční výhodu. Google Cloud Platform (GCP) poskytuje komplexní sadu nástrojů pro vybudování výkonné a škálovatelné datové platformy. Pojďme se podrobně podívat, jak na to.</p>
-
-                    <h2>Architektura moderní datové platformy v GCP</h2>
-                    <p>Úspěšná datová platforma stojí na několika pilířích, které zajišťují celý životní cyklus dat:</p>
-                    
-                    <div class="service-category no-border">
-                        <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>1. Sběr dat (Data Ingestion)</h3>
-                                <p>Prvním krokem je dostat data do cloudu. GCP nabízí flexibilní možnosti: <strong>Pub/Sub</strong> pro streamování dat v reálném čase (např. z IoT zařízení nebo webových aplikací) a <strong>Cloud Storage</strong> pro efektivní ukládání velkých objemů nestrukturovaných dat (obrázky, logy, dokumenty).</p>
-                            </div>
-                        </div>
-                        <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>2. Ukládání a správa (Data Storage)</h3>
-                                <p>Data je třeba bezpečně a organizovaně uložit. <strong>Cloud Storage</strong> slouží jako ideální základ pro datové jezero (Data Lake). Pro strukturovaná data a analytické dotazy je zde <strong>BigQuery</strong> – plně spravovaný, bezserverový datový sklad, který zvládá petabytová měřítka.</p>
-                            </div>
-                        </div>
-                         <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>3. Zpracování a transformace (Data Processing)</h3>
-                                <p>Surová data je nutné transformovat do podoby vhodné pro analýzu. <strong>Dataflow</strong> je perfektní nástroj pro psaní dávkových i streamových ETL/ELT pipeline. Pro ty, kdo preferují open-source ekosystém, je tu <strong>Dataproc</strong>, který umožňuje snadno spravovat Hadoop a Spark clustery.</p>
-                            </div>
-                        </div>
-                        <div class="service-item-detailed">
-                            <div class="service-item-content">
-                                <h3>4. Analýza, vizualizace a AI</h3>
-                                <p>Zde se data mění v cenné vhledy. <strong>BigQuery</strong> umožňuje bleskurychlou interaktivní analýzu. Na vizualizaci a tvorbu dynamických reportů je ideální <strong>Looker Studio</strong>. A pro prediktivní analýzu a strojové učení je tu <strong>Vertex AI</strong>, platforma pro end-to-end vývoj a nasazení ML modelů.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2>Příklad z praxe: Analýza zákaznického chování</h2>
-                     <p>Představte si, že provozujete e-shop a chcete optimalizovat uživatelský zážitek a zvýšit prodeje. Architektura v GCP by mohla vypadat takto:</p>
-                    <ol>
-                        <li>Uživatelské interakce z webu (kliky, vyhledávání, nákupy) jsou v reálném čase streamovány do <strong>Pub/Sub</strong>.</li>
-                        <li><strong>Dataflow</strong> pipeline zpracovává tyto události, obohacuje je o další data (např. z CRM) a ukládá je do <strong>BigQuery</strong>.</li>
-                        <li>Analytický tým pomocí SQL dotazů v <strong>BigQuery</strong> a vizualizací v <strong>Looker Studio</strong> zkoumá chování zákazníků a identifikuje klíčové trendy.</li>
-                        <li>Na základě historických nákupních dat se v <strong>Vertex AI</strong> trénuje model, který personalizuje doporučení produktů pro každého zákazníka.</li>
-                    </ol>
-                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Analýza dat" class="post-inline-image">
-
-                    <h2>Využijte sílu dat s Cloudpeakify</h2>
-                    <p>Vybudování robustní datové platformy na GCP je investicí, která vaší firmě přinese schopnost rychleji inovovat a činit rozhodnutí podložená daty. V Cloudpeakify vám pomůžeme navrhnout, implementovat a spravovat řešení na míru, které bude přesně odpovídat vašim potřebám. <a href="../contact.html" class="btn">Kontaktujte nás</a> a společně uvolníme plný potenciál vašich dat.</p>
+        <section class="hero" style="padding: 120px 0 70px;">
+            <div class="container">
+                <div class="hero-headline" style="gap: 18px;">
+                    <span class="hero-badge">Data & Analytics</span>
+                    <h1>Průvodce stavbou moderní datové platformy na Google Cloud Platform</h1>
+                    <p>Jak navrhnout datový stack, který škáluje s vaším byznysem a poskytuje insighty v reálném čase.</p>
+                    <span class="post-meta">Publikováno 12. května 2024</span>
                 </div>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 40px;">
+            <div class="container">
+                <article class="blog-post-full">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070&auto=format&fit=crop" alt="Datová platforma GCP" class="post-image">
+                    <div class="post-body">
+                        <p>V digitální éře představují data klíčový strategický majetek. Firmy, které dokáží svá data efektivně sbírat, zpracovávat a analyzovat, získávají rozhodující konkurenční výhodu. Google Cloud Platform (GCP) poskytuje komplexní sadu nástrojů pro vybudování výkonné a škálovatelné datové platformy. Pojďme se podrobně podívat, jak na to.</p>
+
+                        <h2>Architektura moderní datové platformy v GCP</h2>
+                        <p>Úspěšná datová platforma stojí na několika pilířích, které zajišťují celý životní cyklus dat:</p>
+
+                        <h3>1. Sběr dat (Data Ingestion)</h3>
+                        <p>Prvním krokem je dostat data do cloudu. GCP nabízí flexibilní možnosti: <strong>Pub/Sub</strong> pro streamování dat v reálném čase (např. z IoT zařízení nebo webových aplikací) a <strong>Cloud Storage</strong> pro efektivní ukládání velkých objemů nestrukturovaných dat (obrázky, logy, dokumenty).</p>
+
+                        <h3>2. Ukládání a správa (Data Storage)</h3>
+                        <p>Data je třeba bezpečně a organizovaně uložit. <strong>Cloud Storage</strong> slouží jako ideální základ pro datové jezero (Data Lake). Pro strukturovaná data a analytické dotazy je zde <strong>BigQuery</strong> – plně spravovaný, bezserverový datový sklad, který zvládá petabytová měřítka.</p>
+
+                        <h3>3. Zpracování a transformace (Data Processing)</h3>
+                        <p>Surová data je nutné transformovat do podoby vhodné pro analýzu. <strong>Dataflow</strong> je perfektní nástroj pro psaní dávkových i streamových ETL/ELT pipeline. Pro ty, kdo preferují open-source ekosystém, je tu <strong>Dataproc</strong>, který umožňuje snadno spravovat Hadoop a Spark clustery.</p>
+
+                        <h3>4. Analýza a reporting</h3>
+                        <p>Plnou hodnotu dat získáte až při jejich využití. <strong>BigQuery</strong> v kombinaci s <strong>Looker Studio</strong> nebo <strong>Looker</strong> umožňuje vytvářet interaktivní dashboardy a detailní reporting. Díky bezserverové architektuře BigQuery platíte jen za skutečně vykonané dotazy, bez nutnosti spravovat infrastrukturu.</p>
+
+                        <h3>5. Pokročilá analytika a AI</h3>
+                        <p>GCP nabízí nástroje jako <strong>Vertex AI</strong> pro škálovatelné strojové učení a MLOps. Můžete tak integrovat prediktivní modely do vašich procesů a využít generativní AI pro automatizaci.</p>
+
+                        <h2>Best practices pro úspěšný projekt</h2>
+                        <ul>
+                            <li><strong>Začněte s jasným cílem:</strong> definujte use-case, byznysový dopad a KPI, které budete sledovat.</li>
+                            <li><strong>Navrhněte governance a bezpečnost:</strong> role & přístupy, data katalog, kvalita dat.</li>
+                            <li><strong>Automatizujte pipeline:</strong> použijte IaC (Terraform) a CI/CD pro Dataform, Dataflow a další komponenty.</li>
+                            <li><strong>Měřte náklady:</strong> implementujte FinOps přístup – rozpočty, alerting a pravidelné optimalizace.</li>
+                        </ul>
+
+                        <h2>Jak vám Cloudpeakify pomůže</h2>
+                        <p>V Cloudpeakify navrhujeme a implementujeme kompletní datové platformy na GCP. Postaráme se o architekturu, integraci datových zdrojů, modelování, vizualizaci i provoz. Součástí je i školení vašeho týmu a nastavení FinOps guardrailů.</p>
+
+                        <p>Chcete probrat váš datový projekt? <a href="contact.html">Ozvěte se nám</a> a připravíme pro vás konkrétní roadmapu.</p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+            <p>&copy; 2024 Cloudpeakify s.r.o. · Google Cloud & AI Delivery Partner</p>
         </div>
     </footer>
 </body>

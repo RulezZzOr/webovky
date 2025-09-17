@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naše Služby - Cloudpeakify s.r.o.</title>
+    <title>Služby – Cloudpeakify s.r.o.</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -27,105 +26,152 @@
     </header>
 
     <main>
+        <section class="hero" style="padding: 120px 0 80px;">
+            <div class="container">
+                <div class="hero-headline" style="gap: 20px;">
+                    <span class="hero-badge">Na co se specializujeme</span>
+                    <h1>Od strategie po provoz. Dodáme vám kompletní cestu do Google Cloud.</h1>
+                    <p>Pomůžeme vám navrhnout cloudovou architekturu, bezpečně migrovat workloady, vybudovat datovou platformu i nastavit provozní model s FinOps.</p>
+                    <div class="hero-actions">
+                        <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" target="_blank" class="btn btn-primary">Domluvit discovery call</a>
+                        <a href="contact.html" class="btn">Získat nabídku</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
-                <h1 class="section-title">Naše Služby</h1>
-                <p style="max-width: 800px; margin: -30px auto 50px auto;">Naše komplexní portfolio služeb je navrženo tak, aby podpořilo vaši firmu v každé fázi cloudové transformace. Od strategie a migrace až po optimalizaci a správu, jsme vaším spolehlivým partnerem pro cloud.</p>
-
-                <!-- Kategorie 1: Cloudová strategie a adopce -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Strategie a Adopce Cloudu</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2070&auto=format&fit=crop" alt="Cloud Strategy" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Framework pro Adopci Cloudu</h3>
-                            <p>Pomůžeme vám vytvořit a implementovat strategický plán pro úspěšné zavedení cloudu ve vaší organizaci, který bude v souladu s vašimi obchodními cíli.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
+                <div class="section-header">
+                    <h2>Servisní domény</h2>
+                    <p>Naše služby jsou modulární. Můžete se opřít o kompletní delivery nebo si vybrat konkrétní oblast, která posílí váš tým.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <span class="pill">Advisory</span>
+                        <h3>Cloud Strategy & Governance</h3>
+                        <p>Definujeme cílový stav platformy, nastavíme bezpečnostní a provozní model a připravíme roadmapu adopce.</p>
+                        <ul class="check-list">
+                            <li>Cloud readiness a business case</li>
+                            <li>Landing zone design (GCP / multicloud)</li>
+                            <li>Security & compliance rámec</li>
+                        </ul>
                     </div>
-                     <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop" alt="Cloud Architecture" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Návrh Cloudové Architektury</h3>
-                            <p>Navrhneme pro vás robustní, škálovatelnou a bezpečnou cloudovou architekturu, ať už pro hybridní prostředí nebo plně v GCP.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
+                    <div class="card">
+                        <span class="pill">Engineering</span>
+                        <h3>Migrace a modernizace</h3>
+                        <p>Přenášíme workloady do GCP s využitím IaC, automatizace a DevOps postupů. Zajistíme hladký přechod i provoz.</p>
+                        <ul class="check-list">
+                            <li>Migrace VMware, Proxmox, fyzických serverů</li>
+                            <li>Google Kubernetes Engine, Cloud Run</li>
+                            <li>CI/CD pipeline, GitOps & observabilita</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span class="pill">Data & AI</span>
+                        <h3>Moderní datová platforma</h3>
+                        <p>Navrhujeme datové sklady, pipeline a AI use-cases. Dodáváme end-to-end řešení od ingestu po vizualizaci.</p>
+                        <ul class="check-list">
+                            <li>BigQuery, Dataproc, Dataform, Pub/Sub</li>
+                            <li>Migrace Teradata, MSSQL, Oracle</li>
+                            <li>ML Ops, Vertex AI, generativní AI</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span class="pill">FinOps & Care</span>
+                        <h3>Optimalizace a provoz</h3>
+                        <p>Hlídáme náklady, dostupnost a bezpečnost. Zajišťujeme provozní dohled a incident management 24/7.</p>
+                        <ul class="check-list">
+                            <li>FinOps governance, chargeback / showback</li>
+                            <li>Well-Architected review, security posture</li>
+                            <li>Managed services & incident response</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Kategorie 2: Migrace a Modernizace -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Migrace a Modernizace</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1573496774439-c9a1a7a40252?q=80&w=2070&auto=format&fit=crop" alt="Cloud Migration" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Migrace do Cloudu</h3>
-                            <p>Specializujeme se na bezpečný a efektivní přenos vašich stávajících systémů, včetně VM (VMware, Proxmox) a databází (např. Teradata), do Google Cloud Platform s minimálním přerušením provozu.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
+        <section class="section">
+            <div class="container split-layout">
+                <div class="highlight-panel">
+                    <span class="pill">Engagement model</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.45rem;">Jak spolupráci nastavujeme</h3>
+                    <ul class="check-list">
+                        <li>Discovery workshop – společně definujeme cíle, rozsah a prioritizaci</li>
+                        <li>Delivery roadmap – rozdělíme projekt na sprinty s jasnými výstupy</li>
+                        <li>Transparentní reporting – burn-down, rizika, finanční přehled</li>
+                        <li>Knowledge transfer – dokumentace, školení a společný provoz</li>
+                    </ul>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span>Engagement 01</span>
+                        <h4>Advisory Sprint</h4>
+                        <p>2–4 týdny zaměřené na architektonický návrh, roadmapu a business case.</p>
                     </div>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1605106702734-205df2244aa7?q=80&w=2070&auto=format&fit=crop" alt="Infrastructure Modernization" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Modernizace Infrastruktury v GCP</h3>
-                            <p>Transformujeme vaši stávající infrastrukturu pomocí moderních služeb GCP, jako jsou Google Kubernetes Engine (GKE) a bezserverové platformy, pro vyšší agilitu a efektivitu.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
+                    <div class="process-step">
+                        <span>Engagement 02</span>
+                        <h4>Build & Transform</h4>
+                        <p>Iterativní doručování, IaC, pipeline, bezpečnost, data a aplikace.</p>
+                    </div>
+                    <div class="process-step">
+                        <span>Engagement 03</span>
+                        <h4>Run & Optimize</h4>
+                        <p>Dlouhodobý provoz, FinOps řízení, incident response a pravidelné review.</p>
                     </div>
                 </div>
-                
-                <!-- Kategorie 3: Datové Služby a Smart Analytics -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Datové Služby a Smart Analytics</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Data Analytics" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Modernizace DWH a GCP Smart Analytics</h3>
-                            <p>Pomůžeme vám přejít na moderní datový sklad s BigQuery a využít plný potenciál GCP Smart Analytics pro pokročilou analýzu dat, reporting a business intelligence.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2>Case study spotlight</h2>
+                    <p>Vybrané projekty, které ukazují, jak jsme pomohli klientům v praxi.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <span class="pill">Fintech</span>
+                        <h3>Migrace core banking platformy</h3>
+                        <p>Za 12 týdnů jsme přenesli kritické transakční systémy do GCP, nastavili HA architekturu a FinOps guardrails.</p>
+                        <ul class="check-list">
+                            <li>Zero-downtime přechod</li>
+                            <li>42 % úspora provozních nákladů</li>
+                            <li>Automatizované CI/CD & observabilita</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span class="pill">Retail</span>
+                        <h3>Moderní datová platforma</h3>
+                        <p>Vybudovali jsme jednotný datový sklad na BigQuery, realtime streaming a reporting v Lookeru pro 200+ uživatelů.</p>
+                        <ul class="check-list">
+                            <li>Integrace ERP, POS a e-commerce</li>
+                            <li>Prediktivní modely skladových zásob</li>
+                            <li>Governance a data catalog</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span class="pill">Výroba</span>
+                        <h3>AI pro prediktivní údržbu</h3>
+                        <p>Nasadili jsme řešení pro monitoring IoT senzorů, machine learning predikce výpadků a automatizované alerty.</p>
+                        <ul class="check-list">
+                            <li>Data pipeline z výrobních linek</li>
+                            <li>Vertex AI modely s MLOps</li>
+                            <li>Snížení neplánovaných prostojů o 25 %</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Kategorie 4: Bezpečnost, Optimalizace a Správa -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Bezpečnost, Optimalizace a Správa</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=2070&auto=format&fit=crop" alt="Cloud Security" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Bezpečnost a Zálohování v Cloudu</h3>
-                            <p>Implementujeme komplexní bezpečnostní opatření a strategie pro zálohování a obnovu (Backup and Disaster Recovery) v GCP, abychom ochránili vaše data a zajistili kontinuitu provozu.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
-                    </div>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=2070&auto=format&fit=crop" alt="FinOps" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>FinOps a Optimalizace Nákladů</h3>
-                            <p>Aplikujeme principy FinOps pro detailní monitoring, analýzu a optimalizaci vašich nákladů na cloud, čímž maximalizujeme hodnotu vašich investic.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- Kategorie 5: Další IT Služby -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Další IT Služby</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=2070&auto=format&fit=crop" alt="IT Consulting" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Komplexní IT Konzultace</h3>
-                            <p>Poskytujeme odborné poradenství v široké škále IT oblastí, včetně síťové podpory, správy telekomunikací a obnovy dat.</p>
-                             <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
-                    </div>
-                     <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="Training" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Expertní Školení a Konzultace</h3>
-                            <p>Nabízíme odborné konzultace a školení na míru pro platformy VMware, Proxmox a Google Cloud Platform, které vašemu týmu dodají potřebné znalosti a dovednosti pro efektivní správu a inovace.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Rezervovat schůzku</a>
-                        </div>
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Pojďme posunout váš cloud</h2>
+                    <p>Nezávazně probereme současný stav, priority a navrhneme další kroky. Během jednoho týdne připravíme návrh spolupráce.</p>
+                    <div class="hero-actions" style="justify-content: center;">
+                        <a href="contact.html" class="btn btn-primary">Kontaktovat Cloudpeakify</a>
+                        <a href="blog.html" class="btn btn-secondary">Číst know-how</a>
                     </div>
                 </div>
             </div>
@@ -134,7 +180,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cloudpeakify s.r.o. Všechna práva vyhrazena.</p>
+            <p>&copy; 2024 Cloudpeakify s.r.o. · Google Cloud & AI Delivery Partner</p>
         </div>
     </footer>
 </body>

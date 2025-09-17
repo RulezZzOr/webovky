@@ -1,23 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - Cloudpeakify s.r.o.</title>
+    <title>Services – Cloudpeakify</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">Cloudpeakify s.r.o.</a>
+                    <a href="index.html">Cloudpeakify</a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -27,88 +26,152 @@
     </header>
 
     <main>
+        <section class="hero" style="padding: 120px 0 80px;">
+            <div class="container">
+                <div class="hero-headline" style="gap: 20px;">
+                    <span class="hero-badge">What we deliver</span>
+                    <h1>From strategy to run. We guide your entire Google Cloud journey.</h1>
+                    <p>We design your cloud architecture, migrate workloads securely, build data platforms and establish the operating model with FinOps.</p>
+                    <div class="hero-actions">
+                        <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" target="_blank" class="btn btn-primary">Book a discovery call</a>
+                        <a href="contact.html" class="btn">Request a proposal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="container">
-                <h1 class="section-title">Our Services</h1>
-                <p style="max-width: 800px; margin: -30px auto 50px auto;">We provide a comprehensive portfolio of services for the Google Cloud Platform to help your business innovate and grow. Our expertise covers all key areas of cloud transformation.</p>
-
-                <!-- Category 1: Cloud Infrastructure -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Cloud Infrastructure and Networks</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?q=80&w=2070&auto=format&fit=crop" alt="Cloud Infrastructure" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>GCP Design and Implementation</h3>
-                            <p>We design and build scalable, secure, and highly available cloud infrastructure tailored to your needs. From virtual servers (Compute Engine) to containerization (Google Kubernetes Engine).</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+                <div class="section-header">
+                    <h2>Service domains</h2>
+                    <p>Our services are modular. Engage us end-to-end or pick the specific area that complements your team.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <span class="pill">Advisory</span>
+                        <h3>Cloud Strategy & Governance</h3>
+                        <p>We define the target platform state, set the security and operating model and craft your adoption roadmap.</p>
+                        <ul class="check-list">
+                            <li>Cloud readiness & business case</li>
+                            <li>Landing zone design (GCP / multicloud)</li>
+                            <li>Security & compliance framework</li>
+                        </ul>
                     </div>
-                     <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Cloud Migration" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Cloud Migration</h3>
-                            <p>We ensure a smooth and secure transition of your existing on-premise infrastructure and applications to the Google Cloud with minimal operational impact. We specialize in migrating VMware and other platforms.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+                    <div class="card">
+                        <span class="pill">Engineering</span>
+                        <h3>Migration & Modernisation</h3>
+                        <p>We migrate workloads to GCP using IaC, automation and DevOps practices. We make the transition and run safe.</p>
+                        <ul class="check-list">
+                            <li>Migrating VMware, Proxmox, bare metal</li>
+                            <li>Google Kubernetes Engine, Cloud Run</li>
+                            <li>CI/CD pipelines, GitOps & observability</li>
+                        </ul>
                     </div>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=2070&auto=format&fit=crop" alt="Networking" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Advanced Networking Services</h3>
-                            <p>We configure and manage virtual networks (VPC), Cloud DNS, VPN, and Interconnect for secure and fast connection of your systems.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+                    <div class="card">
+                        <span class="pill">Data & AI</span>
+                        <h3>Modern data platform</h3>
+                        <p>We design data warehouses, pipelines and AI use cases. We deliver end-to-end – ingest to visualisation.</p>
+                        <ul class="check-list">
+                            <li>BigQuery, Dataproc, Dataform, Pub/Sub</li>
+                            <li>Migrating Teradata, MSSQL, Oracle</li>
+                            <li>ML Ops, Vertex AI, Generative AI</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span class="pill">FinOps & Care</span>
+                        <h3>Operate & Optimise</h3>
+                        <p>We manage costs, availability and security. Ongoing monitoring and incident management 24/7.</p>
+                        <ul class="check-list">
+                            <li>FinOps governance, chargeback / showback</li>
+                            <li>Well-Architected review, security posture</li>
+                            <li>Managed services & incident response</li>
+                        </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Category 2: Data and Analytics -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Data, Analytics, and AI</h2>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=2070&auto=format&fit=crop" alt="Data Analytics" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Modern Data Warehouses with BigQuery</h3>
-                            <p>We implement and optimize data warehouses using BigQuery, allowing you to analyze huge volumes of data in real time.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+        <section class="section">
+            <div class="container split-layout">
+                <div class="highlight-panel">
+                    <span class="pill">Engagement model</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.45rem;">How we work with clients</h3>
+                    <ul class="check-list">
+                        <li>Discovery workshop – align on goals, scope and priorities</li>
+                        <li>Delivery roadmap – break the programme into sprints with clear outputs</li>
+                        <li>Transparent reporting – burn-down, risks, financial overview</li>
+                        <li>Knowledge transfer – documentation, enablement and shared operations</li>
+                    </ul>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span>Engagement 01</span>
+                        <h4>Advisory Sprint</h4>
+                        <p>2–4 weeks focused on architecture blueprint, roadmap and business case.</p>
                     </div>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Data Visualization" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Visualization and Reporting (Looker)</h3>
-                            <p>Using tools like Looker Studio, we transform your data into understandable and interactive reports and dashboards for better decision-making.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+                    <div class="process-step">
+                        <span>Engagement 02</span>
+                        <h4>Build & Transform</h4>
+                        <p>Iterative delivery: IaC, pipelines, security, data and applications.</p>
                     </div>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1620712943543-2858200f745a?q=80&w=2070&auto=format&fit=crop" alt="Machine Learning" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>AI and Machine Learning (Vertex AI)</h3>
-                            <p>Using Vertex AI and other GCP tools, we help you create and deploy machine learning models for predictive analysis, automation, and personalization.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+                    <div class="process-step">
+                        <span>Engagement 03</span>
+                        <h4>Run & Optimise</h4>
+                        <p>Long-term operations, FinOps governance, incident response and regular reviews.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Category 3: Security -->
-                <div class="service-category">
-                    <h2 class="service-category-title">Security and DevOps</h2>
-                     <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2070&auto=format&fit=crop" alt="Security"
-                            class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>Cloud Security</h3>
-                            <p>We implement robust security strategies and tools to protect your data and applications in the cloud, including Identity and Access Management (IAM) and Security Command Center.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+        <section class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2>Case study spotlight</h2>
+                    <p>Selected deliveries that illustrate how we help clients in practice.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <span class="pill">Fintech</span>
+                        <h3>Core banking migration</h3>
+                        <p>Moved critical transaction systems to GCP within 12 weeks, established HA architecture and FinOps guardrails.</p>
+                        <ul class="check-list">
+                            <li>Zero downtime transition</li>
+                            <li>42% operating cost reduction</li>
+                            <li>Automated CI/CD & observability</li>
+                        </ul>
                     </div>
-                    <div class="service-item-detailed">
-                        <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=2070&auto=format&fit=crop" alt="DevOps" class="service-item-img">
-                        <div class="service-item-content">
-                            <h3>DevOps and Automation (CI/CD)</h3>
-                            <p>We implement CI/CD pipelines and automate processes to speed up development, increase reliability, and reduce operating costs.</p>
-                            <a href="https://calendly.com/richard-skacel-cloudpeakify/30min" class="btn" target="_blank">Book a meeting</a>
-                        </div>
+                    <div class="card">
+                        <span class="pill">Retail</span>
+                        <h3>Modern data platform</h3>
+                        <p>Built a unified BigQuery warehouse with realtime streaming and Looker reporting for 200+ users.</p>
+                        <ul class="check-list">
+                            <li>ERP, POS and e-commerce integration</li>
+                            <li>Predictive inventory modelling</li>
+                            <li>Data governance & catalog</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <span class="pill">Manufacturing</span>
+                        <h3>AI for predictive maintenance</h3>
+                        <p>Implemented IoT sensor monitoring, ML predictions and automated alerts to reduce downtime by 25%.</p>
+                        <ul class="check-list">
+                            <li>Data pipelines from production lines</li>
+                            <li>Vertex AI models with MLOps</li>
+                            <li>Operational dashboards & alerting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>Let's advance your cloud platform</h2>
+                    <p>We will review your current state, priorities and propose next steps. Expect a collaboration outline within one week.</p>
+                    <div class="hero-actions" style="justify-content: center;">
+                        <a href="contact.html" class="btn btn-primary">Contact Cloudpeakify</a>
+                        <a href="blog.html" class="btn btn-secondary">Read our insights</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +180,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Cloudpeakify s.r.o. All rights reserved.</p>
+            <p>&copy; 2024 Cloudpeakify s.r.o. · Google Cloud & AI Delivery Partner</p>
         </div>
     </footer>
 </body>
